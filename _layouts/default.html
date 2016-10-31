@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/syntax.css"/>
+	{% feed_meta %}
+</head>
+<body>
+	<section class="hero is-primary">
+		<div class="hero-head">
+			<header class="nav">
+				<div class="container">
+					<div class="nav-left">
+						<a href="/" class="nav-item title">
+							{{site.title}}
+						</a>
+					</div>
+					<div class="nav-center">
+						<a href="https://github.com/akameco" class="nav-item">
+							<span class="icon">
+								<i class="fa fa-github">
+								</i>
+							</span>
+						</a>
+
+						<a href="https://twitter.com/akameco" class="nav-item">
+							<span class="icon">
+								<i class="fa fa-twitter">
+								</i>
+							</span>
+						</a>
+					</div>
+				</div>
+			</header>
+		</div>
+	</section>
+	{{ content }}
+</body>
+</html>
