@@ -1,0 +1,12 @@
+{
+	"rules": {
+		"spellcheck-tech-word": true,
+		"preset-japanese": {
+			"sentence-length": false
+		},
+		"preset-jtf-style": {
+			"3.1.1.全角文字と半角文字の間": false,
+			"4.3.1.丸かっこ（）": false
+		}
+	}
+}
