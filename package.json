@@ -14,7 +14,7 @@
   },
   "scripts": {
     "textlint": "textlint _posts/*.md",
-    "test": "xo && ava"
+    "test": ""
   },
   "dependencies": {},
   "devDependencies": {

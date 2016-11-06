@@ -9,4 +9,4 @@ $ bundle exec jekyll serve
 ```
 
 ## Required
-ruby
+Ruby
