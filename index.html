@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<section class="section">
+	<div class="container">
+		{% for post in paginator.posts  %}
+			<div class="columns">
+				<div class="column is-4">
+					<p class="subtitle4">
+						{{ post.date | date: "%Y/%m/%d" }}
+					</p>
+					<h2 class="title">
+						<a href="{{ site.baseurl }}{{ post.url }}">
+							{{ post.title }}
+						</a>
+					</h2>
+				</div>
+				<div class="column is-8">
+					<div class="content">
+						{{ post.content }}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		{% if paginator.total_pages > 1 %}
+		<nav class="pagination">
+		  {% if paginator.previous_page %}
+				<a class="button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+					前へ
+				</a>
+			{% else %}
+				<a class="button">
+					前へ
+				</a>
+		  {% endif %}
+			{% if paginator.next_page %}
+				<a class="button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+					次へ
+				</a>
+			{% else %}
+				<a class="button">
+					次へ
+				</a>
+			{% endif %}
+
+			<ul>
+		  {% for page in (1..paginator.total_pages) %}
+		    {% if page == paginator.page %}
+					<li>
+						<a class="button is-primary" href="#">{{ page }}</a>
+					</li>
+		    {% elsif page == 1 %}
+					<li>
+						<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+					</li>
+		    {% else %}
+					<li>
+						<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+					</li>
+		    {% endif %}
+		  {% endfor %}
+			</ul>
+		</nav>
+		{% endif %}
+	</div>
+</section>
