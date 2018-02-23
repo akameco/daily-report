@@ -1,5 +1,7 @@
 # Daily Report
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/daily-report.svg)](https://greenkeeper.io/)
+
 ## Install
 
 ```
